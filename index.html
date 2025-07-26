@@ -12,13 +12,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Georgia', serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-
         /* Tela de Apresentação */
         .intro-screen {
             position: fixed;
@@ -26,70 +24,61 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
             transition: opacity 1s ease-out;
         }
-
         .intro-screen.fade-out {
             opacity: 0;
             pointer-events: none;
         }
-
         .intro-content {
             text-align: center;
-            color: #ffffff;
+            color: #000000;
         }
-
         .animated-text {
             font-size: 2.5rem;
-            font-weight: 300;
+            font-weight: 700;
             margin-bottom: 2rem;
             min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #000000;
         }
-
         .typewriter {
             overflow: hidden;
-            border-right: 3px solid #ffffff;
+            border-right: 3px solid #000000;
             white-space: nowrap;
             animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
         }
-
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
-
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #ffffff }
+            50% { border-color: #000000 }
         }
-
         .loading-dots {
             display: inline-block;
             margin-top: 2rem;
         }
-
         .loading-dots span {
             display: inline-block;
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: #ffffff;
+            background-color: #000000;
             margin: 0 3px;
             animation: loading 1.4s infinite ease-in-out both;
         }
-
         .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
         .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
-
         @keyframes loading {
             0%, 80%, 100% {
                 transform: scale(0);
@@ -100,20 +89,17 @@
                 opacity: 1;
             }
         }
-
         /* Página Principal */
         .main-content {
             opacity: 0;
             transition: opacity 1s ease-in;
-            background: #000000;
-            color: white;
+            background: #ffffff;
+            color: #000000;
             min-height: 100vh;
         }
-
         .main-content.show {
             opacity: 1;
         }
-
         .section {
             min-height: 100vh;
             display: flex;
@@ -122,54 +108,48 @@
             padding: 2rem;
             position: relative;
         }
-
         .section-content {
             text-align: center;
             max-width: 900px;
             z-index: 2;
         }
-
         .section h1 {
             font-size: 3.5rem;
-            font-weight: bold;
+            font-weight: 900;
             margin-bottom: 2rem;
             line-height: 1.2;
-            color: white;
-            text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4);
+            color: #000000;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3), 0 0 25px rgba(0,0,0,0.2);
         }
-
         .section h2 {
             font-size: 2.8rem;
-            font-weight: bold;
+            font-weight: 900;
             margin-bottom: 2rem;
             line-height: 1.3;
-            color: white;
-            text-shadow: 0 0 8px rgba(255,255,255,0.7), 0 0 16px rgba(255,255,255,0.5), 0 0 24px rgba(255,255,255,0.3);
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 12px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.2);
         }
-
         .section p {
             font-size: 1.4rem;
             line-height: 1.8;
             margin-bottom: 2rem;
-            color: white;
+            color: #000000;
             font-style: italic;
-            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-
         .verse {
             font-size: 1.2rem;
             margin-top: 1rem;
-            font-weight: normal;
-            color: white;
-            text-shadow: 0 0 5px rgba(255,255,255,0.4);
+            font-weight: 700;
+            color: #000000;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-
         /* Seção 1 - Luz do Mundo */
         .section-1 {
-            background: radial-gradient(circle at center, #111111 0%, #000000 70%);
+            background: radial-gradient(circle at center, #ffffff 0%, #f8f9fa 70%);
             position: relative;
         }
-
         .section-1::before {
             content: '';
             position: absolute;
@@ -180,116 +160,137 @@
             background: radial-gradient(circle at 50% 30%, rgba(255,215,0,0.1) 0%, transparent 50%);
             z-index: 1;
         }
-
         .section-1 h1 {
-            color: white;
-            text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 30px rgba(255,215,0,0.6), 0 0 45px rgba(255,215,0,0.4);
+            color: #000000;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5), 0 0 20px rgba(255,215,0,0.4), 0 0 30px rgba(255,215,0,0.3);
         }
-
         .light-icon {
             font-size: 4rem;
-            color: #ffd700;
+            color: #ffa500;
             margin-left: 1rem;
             animation: glow 3s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px #ffd700;
+            text-shadow: 0 0 15px #ffa500, 2px 2px 4px rgba(0,0,0,0.3);
         }
-
         @keyframes glow {
             from {
-                text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
+                text-shadow: 0 0 15px #ffa500, 0 0 20px #ffa500, 2px 2px 4px rgba(0,0,0,0.3);
                 transform: scale(1);
             }
             to {
-                text-shadow: 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700;
+                text-shadow: 0 0 25px #ffa500, 0 0 35px #ffa500, 0 0 45px #ffa500, 2px 2px 4px rgba(0,0,0,0.3);
                 transform: scale(1.1);
             }
         }
-
         /* Seção 2 - Salvação */
         .section-2 {
-            background: radial-gradient(circle at center, #0a0a0a 0%, #000000 70%);
+            background: radial-gradient(circle at center, #f8f9fa 0%, #ffffff 70%);
         }
-
         .section-2 h2 {
-            color: white;
-            text-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 24px rgba(135,206,235,0.5), 0 0 36px rgba(135,206,235,0.3);
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgba(30,144,255,0.3), 0 0 25px rgba(30,144,255,0.2);
         }
-
         .video-container {
             margin: 3rem 0;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid rgba(255,215,0,0.3);
+            border: 2px solid rgba(255,215,0,0.4);
         }
-
         .video-container video {
             width: 100%;
             height: 350px;
             object-fit: cover;
             border-radius: 15px;
-            background: #000;
+            background: #f8f9fa;
         }
-
-        .video-container video::-webkit-media-controls-panel {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .video-container video::-webkit-media-controls-play-button,
-        .video-container video::-webkit-media-controls-volume-slider {
-            filter: brightness(0) saturate(100%) invert(84%) sepia(58%) saturate(2476%) hue-rotate(2deg) brightness(101%) contrast(101%);
-        }
-
         .call-to-action {
             font-style: italic;
             font-size: 1.3rem;
             margin-top: 2rem;
-            color: white;
-            text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 16px rgba(135,206,235,0.4);
+            color: #000000;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 8px rgba(30,144,255,0.2);
         }
-
-        /* Seção 3 - Localização da Igreja */
-        .section-3 {
-            background: radial-gradient(circle at center, #0f0f0f 0%, #000000 70%);
+        /* Seção 3 - Foto do Evento */
+        .section-event {
+            background: radial-gradient(circle at center, #ffffff 0%, #f8f9fa 70%);
         }
-
-        .section-3 h2 {
-            color: white;
-            text-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 24px rgba(76,175,80,0.5), 0 0 36px rgba(76,175,80,0.3);
+        .section-event h2 {
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgba(255,99,71,0.3), 0 0 25px rgba(255,99,71,0.2);
         }
-
+        .camera-icon {
+            font-size: 3rem;
+            color: #ff6347;
+            animation: flash 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        @keyframes flash {
+            0%, 100% { 
+                opacity: 0.8; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.1); 
+                text-shadow: 0 0 20px #ff6347, 1px 1px 2px rgba(0,0,0,0.3);
+            }
+        }
+        .event-image-container {
+            margin: 3rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .event-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255,99,71,0.4);
+        }
+        .event-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+        }
+        /* Seção 4 - Localização da Igreja */
+        .section-4 {
+            background: radial-gradient(circle at center, #f8f9fa 0%, #ffffff 70%);
+        }
+        .section-4 h2 {
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgba(76,175,80,0.3), 0 0 25px rgba(76,175,80,0.2);
+        }
         .location-icon {
             font-size: 3rem;
-            color: #4caf50;
+            color: #228b22;
             animation: pulse 2s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
-
         .map-container {
             margin: 3rem 0;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid rgba(76,175,80,0.3);
+            border: 2px solid rgba(76,175,80,0.4);
         }
-
         .map-container iframe {
             width: 100%;
             height: 400px;
             border: none;
         }
-
         .church-info {
             display: flex;
             flex-direction: column;
@@ -299,51 +300,53 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .info-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.05);
             border-radius: 10px;
-            border: 1px solid rgba(76,175,80,0.2);
+            border: 1px solid rgba(76,175,80,0.3);
         }
-
         .info-item i {
-            color: #4caf50;
+            color: #228b22;
             font-size: 1.2rem;
             min-width: 20px;
         }
-
         .info-item span {
-            color: white;
+            color: #000000;
             font-size: 1.1rem;
-            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
-
-        /* Seção 4 - Chamado */
-        .section-4 {
-            background: radial-gradient(circle at center, #0d0d0d 0%, #000000 70%);
+        /* Seção 5 - Chamado */
+        .section-5 {
+            background: radial-gradient(circle at center, #ffffff 0%, #f8f9fa 70%);
         }
-
-        .section-4 h2 {
-            color: white;
-            text-shadow: 0 0 12px rgba(255,255,255,0.8), 0 0 24px rgba(144,238,144,0.5), 0 0 36px rgba(144,238,144,0.3);
+        .section-5 h2 {
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgba(144,238,144,0.3), 0 0 25px rgba(144,238,144,0.2);
         }
-
         .cross-icon {
             font-size: 4rem;
-            color: #ffd700;
+            color: #daa520;
             margin: 1rem;
             animation: shine 4s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
-
         @keyframes shine {
-            0%, 100% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.1); text-shadow: 0 0 30px #ffd700; }
+            0%, 100% { 
+                opacity: 0.8; 
+                transform: scale(1); 
+                text-shadow: 0 0 15px #daa520, 1px 1px 2px rgba(0,0,0,0.3);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.1); 
+                text-shadow: 0 0 25px #daa520, 0 0 35px #daa520, 1px 1px 2px rgba(0,0,0,0.3);
+            }
         }
-
         /* Navegação lateral */
         .side-navigation {
             position: fixed;
@@ -357,51 +360,45 @@
             opacity: 0;
             transition: opacity 1s ease-in;
         }
-
         .side-navigation.show {
             opacity: 1;
         }
-
         .nav-dot {
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background: rgba(255,215,0,0.4);
+            background: rgba(255,215,0,0.6);
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 2px solid rgba(255,215,0,0.6);
+            border: 2px solid rgba(0,0,0,0.3);
         }
-
         .nav-dot.active {
-            background: #ffd700;
+            background: #ffa500;
             transform: scale(1.3);
-            box-shadow: 0 0 15px #ffd700;
+            box-shadow: 0 0 15px #ffa500, 0 2px 4px rgba(0,0,0,0.3);
         }
-
         .nav-dot:hover {
-            background: rgba(255,215,0,0.7);
+            background: rgba(255,215,0,0.8);
             transform: scale(1.2);
         }
-
         /* Painel de áudio fixo */
         .audio-panel {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(25,25,50,0.95));
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,249,250,0.95));
             backdrop-filter: blur(20px);
-            border-top: 2px solid rgba(255,215,0,0.3);
+            border-top: 2px solid rgba(0,0,0,0.2);
             padding: 1rem;
             z-index: 1000;
             opacity: 0;
             transition: opacity 1s ease-in;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
         }
-
         .audio-panel.show {
             opacity: 1;
         }
-
         .audio-controls {
             display: flex;
             align-items: center;
@@ -410,9 +407,8 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
         .play-btn {
-            background: linear-gradient(45deg, #ffd700, #daa520);
+            background: linear-gradient(45deg, #ffa500, #daa520);
             border: none;
             width: 55px;
             height: 55px;
@@ -421,61 +417,52 @@
             font-size: 1.3rem;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+            box-shadow: 0 4px 15px rgba(255,165,0,0.3), 0 2px 4px rgba(0,0,0,0.2);
         }
-
         .play-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+            box-shadow: 0 6px 20px rgba(255,165,0,0.4), 0 3px 6px rgba(0,0,0,0.3);
         }
-
         .progress-bar {
             flex: 1;
             max-width: 300px;
             height: 6px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.2);
             border-radius: 5px;
             overflow: hidden;
             cursor: pointer;
         }
-
         .progress {
             height: 100%;
-            background: linear-gradient(45deg, #ffd700, #daa520);
+            background: linear-gradient(45deg, #ffa500, #daa520);
             width: 0%;
             transition: width 0.1s ease;
         }
-
         .time-display {
             font-size: 0.9rem;
-            color: rgba(255,215,0,0.9);
+            color: #000000;
             min-width: 40px;
             font-weight: bold;
         }
-
         .volume-control {
             width: 100px;
         }
-
         .song-info {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-right: 2rem;
         }
-
         .song-title {
             font-size: 1rem;
             font-weight: bold;
-            color: #ffd700;
+            color: #000000;
         }
-
         .song-artist {
             font-size: 0.8rem;
             opacity: 0.8;
-            color: #87ceeb;
+            color: #333333;
         }
-
         /* Botão de oração */
         .prayer-btn {
             background: linear-gradient(45deg, #4169e1, #1e90ff);
@@ -488,26 +475,22 @@
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(65,105,225,0.3);
+            box-shadow: 0 5px 15px rgba(65,105,225,0.3), 0 2px 4px rgba(0,0,0,0.2);
         }
-
         .prayer-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(65,105,225,0.4);
+            box-shadow: 0 8px 25px rgba(65,105,225,0.4), 0 4px 8px rgba(0,0,0,0.3);
         }
-
         /* Efeitos de scroll */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
-
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* Efeito de partículas de luz */
         .light-particles {
             position: absolute;
@@ -516,51 +499,41 @@
             overflow: hidden;
             z-index: 1;
         }
-
         .particle {
             position: absolute;
-            background: #ffd700;
+            background: #ffa500;
             border-radius: 50%;
-            opacity: 0.6;
+            opacity: 0.4;
             animation: float 6s ease-in-out infinite;
         }
-
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
-            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
         }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .animated-text {
                 font-size: 1.8rem;
             }
-
             .section h1 {
                 font-size: 2.5rem;
             }
-
             .section h2 {
                 font-size: 2rem;
             }
-
             .section p {
                 font-size: 1.2rem;
             }
-
             .light-icon, .cross-icon {
                 font-size: 3rem;
             }
-
             .side-navigation {
                 right: 1rem;
             }
-
             .audio-controls {
                 flex-wrap: wrap;
                 gap: 0.5rem;
             }
-
             .song-info {
                 margin-right: 0;
                 order: -1;
@@ -582,7 +555,6 @@
             </div>
         </div>
     </div>
-
     <!-- Conteúdo Principal -->
     <div class="main-content" id="mainContent">
         <!-- Seção 1 - Luz do Mundo -->
@@ -602,67 +574,83 @@
                 <h1>Mundo <i class="fas fa-sun light-icon"></i></h1>
                 <p>"Eu sou a luz do mundo; quem me segue não andará em trevas, mas terá a luz da vida."</p>
                 <p class="verse">João 8:12</p>
+                <p>⬇️Deslize a tela para descobrir algo incrivel⬇️</p>
             </div>
         </section>
-
         <!-- Seção 2 - Salvação -->
         <section class="section section-2" id="section-2">
             <div class="section-content fade-in">
                 <h2>Não Desista!</h2>
                 <p>Jesus pode transformar sua Vida.</p>
-                
+                                
                 <div class="video-container">
-                    <video controls preload="metadata" poster="/placeholder.jpg?height=350&width=600&query=cruz dourada fundo escuro">
+                    <video controls preload="metadata" poster="/placeholder.svg?height=350&width=600">
                         <source src="./img/WhatsApp Video 2025-07-20 at 15.04.12.mp4" type="video/mp4">
                         Seu navegador não suporta vídeo HTML5.
                     </video>
                 </div>
-                
+                                
                 <p class="call-to-action">Ouça esta mensagem de esperança e continue descobrindo o plano de Deus para sua vida...</p>
                 <button class="prayer-btn">
                     <i class="fas fa-praying-hands me-2"></i>Fazer uma Oração
                 </button>
             </div>
         </section>
-
-        <!-- Seção 3 - Localização da Igreja -->
-        <section class="section section-3" id="section-3">
+        <!-- Seção 3 - Evento Especial -->
+        <section class="section section-event" id="section-3">
+            <div class="section-content fade-in">
+                <h2>Evento Especial <i class="fas fa-calendar-alt camera-icon"></i></h2>
+                <p>Venha participar do nosso próximo evento</p>
+                
+                <div class="event-image-container">
+                    <div class="event-image">
+                        <img src="./img/WhatsApp Image 2025-07-26 at 10.43.46.jpeg" alt="Ativando uma Geração Profética - 26/07 Sábado 19h30">
+                    </div>
+                </div>
+                
+                <p class="call-to-action">Não perca esta oportunidade única de crescimento espiritual!</p>
+                <!-- <button class="prayer-btn">
+                    <i class="fas fa-calendar-check me-2"></i>Confirmar Presença
+                </button> -->
+            </div>
+        </section>
+        <!-- Seção 4 - Localização da Igreja -->
+        <section class="section section-4" id="section-4">
             <div class="section-content fade-in">
                 <h2>Venha nos Visitar <i class="fas fa-map-marker-alt location-icon"></i></h2>
                 <p>Encontre nossa igreja e faça parte da nossa comunidade de fé</p>
-                
+                                
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7678.544585747899!2d-48.30127894878388!3d-15.78958999336968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bc710ee39e6cd%3A0xc02623a35ee8a92e!2sAssembl%C3%A9ia%20De%20Deus%20Fama!5e0!3m2!1spt-PT!2sbr!4v1748744611236!5m2!1spt-PT!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1841.3581689888558!2d-48.282713149970895!3d-15.772371666403007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bc777b65dcccf%3A0xe7c338394bcc8832!2sAssembleia%20De%20Deus%20Fama!5e0!3m2!1spt-BR!2sbr!4v1753547090298!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                        
+                                        
                 <div class="church-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Praça da Sé, s/n - Sé, São Paulo - SP</span>
+                        <span>Mansões Camargo Quadra 07 lote 16</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
-                        <span>Cultos: Dom 9h, 15h e 19h | Ter e Qui 19h30</span>
+                        <span>Cultos: Dom 18h | Ter 18h</span>
                     </div>
-                    <div class="info-item">
+                    <!-- <div class="info-item">
                         <i class="fas fa-phone"></i>
                         <span>(11) 3107-6832</span>
-                    </div>
+                    </div> -->
                 </div>
-                
+                                
                 <button class="prayer-btn" onclick="openGoogleMaps()">
                     <i class="fas fa-directions me-2"></i>Como Chegar
                 </button>
             </div>
         </section>
-
-        <!-- Seção 4 - Chamado -->
-        <section class="section section-4" id="section-4">
+        <!-- Seção 5 - Chamado -->
+        <section class="section section-5" id="section-5">
             <div class="section-content fade-in">
                 <h2>Aceite Jesus em seu coração</h2>
                 <i class="fas fa-cross cross-icon"></i>
@@ -675,15 +663,14 @@
             </div>
         </section>
     </div>
-
     <!-- Navegação lateral -->
     <div class="side-navigation" id="sideNavigation">
         <div class="nav-dot active" data-section="1" title="Luz do Mundo"></div>
         <div class="nav-dot" data-section="2" title="Salvação"></div>
-        <div class="nav-dot" data-section="3" title="Nossa Igreja"></div>
-        <div class="nav-dot" data-section="4" title="Chamado"></div>
+        <div class="nav-dot" data-section="3" title="Evento Especial"></div>
+        <div class="nav-dot" data-section="4" title="Nossa Igreja"></div>
+        <div class="nav-dot" data-section="5" title="Chamado"></div>
     </div>
-
     <!-- Painel de áudio fixo -->
     <div class="audio-panel" id="audioPanel">
         <div class="audio-controls">
@@ -693,53 +680,50 @@
                     <div class="song-artist">Cristo Vive!</div>
                 </div>
             </div>
-            
+                        
             <button class="play-btn" id="playBtn">
                 <i class="fas fa-play" id="playIcon"></i>
             </button>
-            
+                        
             <div class="time-display">
                 <span id="currentTime">0:00</span>
             </div>
-            
+                        
             <div class="progress-bar" id="progressContainer">
                 <div class="progress" id="progressBar"></div>
             </div>
-            
+                        
             <div class="time-display">
-                <span id="totalTime">4:32</span>
+                <span id="totalTime">0:32</span>
             </div>
-            
+                        
             <div class="d-flex align-items-center">
-                <i class="fas fa-volume-up me-2" style="color: #ffd700;"></i>
+                <i class="fas fa-volume-up me-2" style="color: #000000;"></i>
                 <input type="range" class="form-range volume-control" min="0" max="100" value="70" id="volumeControl">
             </div>
         </div>
-        
+                
         <!-- Elemento de áudio oculto -->
         <audio id="audioPlayer" preload="auto">
             <source src="./img/WhatsApp Audio 2025-07-20 at 15.14.24.mpeg" type="audio/mpeg">
             Seu navegador não suporta áudio HTML5.
         </audio>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Textos em sequência específica
         const sequentialTexts = [
             "Jesus Cristo",
-            "Vive", 
+            "Vive",             
             "Ele é Real"
         ];
-
         let currentTextIndex = 0;
         let textChangeCount = 0;
         const maxTextChanges = 3; // Apenas 3 textos na sequência
-
         function typeWriter(text, element, callback) {
             element.innerHTML = '';
             element.classList.add('typewriter');
-            
+                        
             let i = 0;
             const timer = setInterval(() => {
                 if (i < text.length) {
@@ -754,15 +738,14 @@
                 }
             }, 80);
         }
-
         function showSequentialText() {
             const textElement = document.getElementById('animatedText');
             const selectedText = sequentialTexts[currentTextIndex];
-            
+                        
             typeWriter(selectedText, textElement, () => {
                 textChangeCount++;
                 currentTextIndex++;
-                
+                                
                 if (textChangeCount < maxTextChanges) {
                     setTimeout(showSequentialText, 1000);
                 } else {
@@ -774,7 +757,7 @@
                             document.getElementById('sideNavigation').classList.add('show');
                             document.getElementById('audioPanel').classList.add('show');
                             document.body.style.overflow = 'auto';
-                            
+                                                        
                             // Inicializar funcionalidades da página principal
                             initMainPage();
                         }, 1000);
@@ -782,7 +765,6 @@
                 }
             });
         }
-
         // Função para inicializar a página principal
         function initMainPage() {
             // Elementos do DOM
@@ -797,11 +779,11 @@
             const navDots = document.querySelectorAll('.nav-dot');
             const sections = document.querySelectorAll('.section');
             const prayerBtns = document.querySelectorAll('.prayer-btn');
+            
             let isPlaying = false;
-
             // Elementos do vídeo
             const videoElement = document.querySelector('video');
-
+            
             // Função para pausar o áudio
             function pauseAudio() {
                 if (isPlaying) {
@@ -810,21 +792,18 @@
                     isPlaying = false;
                 }
             }
-
             // Função para pausar o vídeo
             function pauseVideo() {
                 if (videoElement && !videoElement.paused) {
                     videoElement.pause();
                 }
             }
-
             // Event listener para quando o vídeo começar a tocar
             if (videoElement) {
                 videoElement.addEventListener('play', () => {
                     pauseAudio();
                 });
             }
-
             // Event listener do botão play do áudio
             playBtn.addEventListener('click', () => {
                 if (isPlaying) {
@@ -838,14 +817,12 @@
                     isPlaying = true;
                 }
             });
-
             // Função para formatar tempo
             function formatTime(seconds) {
                 const mins = Math.floor(seconds / 60);
                 const secs = Math.floor(seconds % 60);
                 return `${mins}:${secs.toString().padStart(2, '0')}`;
             }
-
             // Atualizar progresso
             audioPlayer.addEventListener('timeupdate', () => {
                 if (audioPlayer.duration) {
@@ -854,12 +831,10 @@
                     currentTimeSpan.textContent = formatTime(audioPlayer.currentTime);
                 }
             });
-
             // Quando o áudio carrega
             audioPlayer.addEventListener('loadedmetadata', () => {
                 totalTimeSpan.textContent = formatTime(audioPlayer.duration);
             });
-
             // Quando o áudio termina
             audioPlayer.addEventListener('ended', () => {
                 playIcon.className = 'fas fa-play';
@@ -867,12 +842,10 @@
                 progressBar.style.width = '0%';
                 currentTimeSpan.textContent = '0:00';
             });
-
             // Controle de volume
             volumeControl.addEventListener('input', (e) => {
                 audioPlayer.volume = e.target.value / 100;
             });
-
             // Clique na barra de progresso
             progressContainer.addEventListener('click', (e) => {
                 const rect = progressContainer.getBoundingClientRect();
@@ -881,7 +854,6 @@
                 const percentage = clickX / width;
                 audioPlayer.currentTime = percentage * audioPlayer.duration;
             });
-
             // Navegação por pontos
             navDots.forEach(dot => {
                 dot.addEventListener('click', () => {
@@ -890,54 +862,48 @@
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                 });
             });
-
             // Botões de oração
             prayerBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     alert('🙏 "Senhor Jesus, eu reconheço que sou pecador e preciso do Seu perdão. Creio que o Senhor morreu por meus pecados e ressuscitou. Eu me arrependo dos meus pecados e convido o Senhor para entrar em meu coração e ser meu Salvador pessoal. Amém." \n\n✨ Se você fez esta oração com sinceridade, você agora é filho(a) de Deus! Procure uma igreja evangélica para crescer na fé.');
                 });
             });
-
             // Atualizar navegação baseada no scroll
             function updateNavigation() {
                 const scrollPosition = window.scrollY + window.innerHeight / 2;
-                
+                                
                 sections.forEach((section, index) => {
                     const sectionTop = section.offsetTop;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    
+                                        
                     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                         navDots.forEach(dot => dot.classList.remove('active'));
                         navDots[index].classList.add('active');
                     }
                 });
             }
-
             // Animações de fade-in
             function handleScrollAnimations() {
                 const fadeElements = document.querySelectorAll('.fade-in');
-                
+                                
                 fadeElements.forEach(element => {
                     const elementTop = element.getBoundingClientRect().top;
                     const elementVisible = 150;
-                    
+                                        
                     if (elementTop < window.innerHeight - elementVisible) {
                         element.classList.add('visible');
                     }
                 });
             }
-
             // Event listeners
             window.addEventListener('scroll', () => {
                 updateNavigation();
                 handleScrollAnimations();
             });
-
             // Inicialização
             audioPlayer.volume = 0.7;
             handleScrollAnimations();
             updateNavigation();
-
             // Auto-iniciar música suave após 3 segundos
             setTimeout(() => {
                 audioPlayer.play().then(() => {
@@ -948,19 +914,16 @@
                 });
             }, 3000);
         }
-
         // Função para abrir Google Maps
         function openGoogleMaps() {
-            const googleMapsUrl = `https://maps.app.goo.gl/EsWJSnKPVdmEdMfW6`;
+            const googleMapsUrl = `https://maps.app.goo.gl/4LGYfSeNdXfxGKAC7`;
             window.open(googleMapsUrl, '_blank');
         }
-
         // Iniciar a apresentação
         document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden';
             setTimeout(showSequentialText, 1000);
         });
-
         // Permitir pular a apresentação clicando
         document.getElementById('introScreen').addEventListener('click', () => {
             if (textChangeCount < maxTextChanges) {
